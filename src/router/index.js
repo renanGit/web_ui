@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueAnalytics from 'vue-analytics';
 
 import routes from './routes';
 
@@ -20,6 +21,11 @@ export default function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> publicPath
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE,
+  });
+
+  Vue.use(VueAnalytics, {
+    id: 'UA-144359221-1',
+    Router,
   });
 
   return Router;
