@@ -26,7 +26,7 @@ export default function (/* { store, ssrContext } */) {
   if (process.env.NODE_ENV === 'production') {
     const router = Router;
     Vue.use(VueAnalytics, {
-      id: process.env.TRACKING_ID,
+      id: 'UA-144359221-1',
       router,
     });
   }
