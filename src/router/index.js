@@ -23,10 +23,13 @@ export default function (/* { store, ssrContext } */) {
     base: process.env.VUE_ROUTER_BASE,
   });
 
-  Vue.use(VueAnalytics, {
-    id: 'UA-144359221-1',
-    Router,
-  });
+  if (process.env.NODE_ENV === 'production') {
+    const router = Router;
+    Vue.use(VueAnalytics, {
+      id: process.env.TRACKING_ID,
+      router,
+    });
+  }
 
   return Router;
 }
