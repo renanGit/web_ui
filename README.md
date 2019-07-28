@@ -22,8 +22,14 @@ npm run lint
 quasar build
 ```
 
-## SSH to heroku
-heroku ps:exec
+## Helpful commands Heroku
+```bash
+heroku ps:exec # ssh
+heroku ps:restart # restart dyno
+heroku ps:stop # stop dyno
+heroku ps:start # start dyno
+heroku logs
+```
 
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).

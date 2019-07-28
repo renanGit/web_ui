@@ -10,7 +10,9 @@
     "build": "quasar build",
     "start": "node server.js",
     "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "deploy": "git push heroku master",
+    "env_deploy": "heroku config:set $(cat .env | sed '/^$/d; /#[[:print:]]*$/d')"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
@@ -19,6 +21,7 @@
     "axios": "^0.18.1",
     "connect-history-api-fallback": "^1.6.0",
     "express": "^4.17.1",
+    "helmet": "^3.20.0",
     "quasar": "^1.0.5",
     "serve-static": "^1.14.1",
     "vue-analytics": "^5.17.0"

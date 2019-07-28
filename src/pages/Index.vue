@@ -36,17 +36,17 @@
                   <q-separator spaced/>
 
                   <div class="row">
-                    <div class="col-3 text-weight-bold">Name:</div>
+                    <div class="col-60px text-weight-bold q-mr-xs">Name:</div>
                     <div class="col-9">Renan L. Santana</div>
                   </div>
                   <div class="row">
-                    <div class="col-3 text-weight-bold">Location:</div>
+                    <div class="col-60px text-weight-bold q-mr-xs">Location:</div>
                     <div class="col-9"><div class="fas fa-map-marker-alt"/> Portland, OR</div>
                   </div>
                   <q-separator spaced/>
 
                   <div class="row items-center">
-                    <div class="col-3 text-weight-bold">Git:</div>
+                    <div class="col-60px text-weight-bold q-mr-xs">Git:</div>
                     <div class="col">
                       <q-btn
                         type="a"
@@ -61,7 +61,7 @@
                   </div>
 
                   <div class="row items-center q-my-md">
-                    <div class="col-3 text-weight-bold">LinkedIn:</div>
+                    <div class="col-60px text-weight-bold q-mr-xs">LinkedIn:</div>
                     <div class="col">
                       <q-btn
                         type="a"
@@ -390,8 +390,8 @@
                   <q-item v-for="row in skills.slice(0, skills.length / 2)" :key="row.lang">
                     <q-item-section>
                       <div class="row items-center">
-                        <div class="col-3 items-center">{{ row.lang }}</div>
-                        <q-rating class="col-9"
+                        <div class="col-3 items-center q-mr-md">{{ row.lang }}</div>
+                        <q-rating class="col-8"
                           readonly
                           :value="row.stars"
                           size="1.5em"
@@ -412,8 +412,8 @@
                   >
                     <q-item-section>
                       <div class="row items-center">
-                        <div class="col-3 items-center">{{ row.lang }}</div>
-                        <q-rating class="col-9"
+                        <div class="col-3 items-center q-mr-md">{{ row.lang }}</div>
+                        <q-rating class="col-8"
                           readonly
                           :value="row.stars"
                           size="1.5em"
@@ -492,5 +492,9 @@ export default {
   border:0 solid transparent;
   border-top-color:#bebebe;
   border-width:9px 0 0 11px
+}
+
+.col-60px{
+  width: 60px;
 }
 </style>
